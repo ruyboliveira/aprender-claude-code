@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprenda Claude Code — Guia Interativo em Português</title>
+  <meta name="description" content="Aprenda a usar o Claude Code com este guia interativo completo em português. Baseado na documentação oficial da Anthropic.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Highlight.js para syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+  <!-- Estilos próprios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Overlay para mobile -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Header fixo -->
+  <header class="header">
+    <button class="btn-menu" id="btn-menu" aria-label="Abrir menu">☰</button>
+
+    <a href="#1" class="header-logo" onclick="App.navegarPara(1)">
+      <div class="logo-icon">⚡</div>
+      <span>Aprenda Claude Code</span>
+      <span class="logo-badge">PT-BR</span>
+    </a>
+
+    <div class="header-spacer"></div>
+
+    <div class="header-search">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="busca-input"
+        placeholder="Buscar módulos..."
+        autocomplete="off"
+      >
+    </div>
+  </header>
+
+  <!-- Layout principal -->
+  <div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+
+        <!-- Progresso geral -->
+        <div class="progresso-container">
+          <div class="progresso-label">
+            <span>Seu progresso</span>
+            <span id="texto-progresso">0/8 módulos concluídos</span>
+          </div>
+          <div class="progresso-barra-container">
+            <div class="progresso-barra" id="barra-progresso"></div>
+          </div>
+        </div>
+
+        <p class="sidebar-titulo">Módulos</p>
+
+        <!-- Lista de módulos (preenchida pelo JS) -->
+        <ul class="lista-modulos" id="lista-modulos">
+          <!-- Gerado pelo app.js -->
+        </ul>
+
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="btn-reset" onclick="App.resetarProgresso()">
+          🔄 Resetar progresso
+        </button>
+      </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo-principal">
+      <div id="area-conteudo">
+        <!-- Conteúdo gerado pelo app.js -->
+        <div style="display:flex;align-items:center;justify-content:center;height:60vh;color:var(--color-text-dim);">
+          <span style="font-size:2rem;">⚡</span>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Highlight.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- Módulos de conteúdo -->
+  <script src="content/modulo1.js"></script>
+  <script src="content/modulo2.js"></script>
+  <script src="content/modulo3.js"></script>
+  <script src="content/modulo4.js"></script>
+  <script src="content/modulo5.js"></script>
+  <script src="content/modulo6.js"></script>
+  <script src="content/modulo7.js"></script>
+  <script src="content/modulo8.js"></script>
+
+  <!-- Lógica da aplicação -->
+  <script src="js/progress.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
